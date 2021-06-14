@@ -64,8 +64,14 @@ dansRoll();
 ```
 
 a. Where is closure used in this code? How can you tell?
+Closure is used when consule.log said {name}, you can tell because it’s referencing some thing from a parent function.
 b. Compare and contrast calling `dansRoll` the first and second time. What is always the same? What could change?
+Based off of what I was told today nothing because nothing is defined within new role.
+Calling it the first or second time doesn’t affect it because I’m calling the same thing either way.
+I am unsure of the scope on the second question, a lot could change.
+I’m going to assume you mean what could change to fix the code, that would be invoked zoesRoll the second time.
 c. What is the lexical scope of `newRoll`? 
+Based off of what I was told today nothing because nothing is defined within `new role`.
 
 
 ### Task 3 - Stretch Goals
