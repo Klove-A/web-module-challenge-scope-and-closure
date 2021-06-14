@@ -88,7 +88,6 @@ function finalScore(inningCB, num){
     Away: inningCB()
   }
 }
-console.log(finalScore(inning, 9));
 
 /* ⚾️⚾️⚾️ Task 4: getInningScore() ⚾️⚾️⚾️
 Use the getInningScore() function below to do the following:
@@ -101,7 +100,7 @@ function getInningScore(inningCB) {
     Away: inningCB()
   }
 }
-
+console.log(getInningScore(inning));
 
 /* ⚾️⚾️⚾️ Task 5: scoreboard() ⚾️⚾️⚾️
 Use the scoreboard function below to do the following:
@@ -144,12 +143,21 @@ Use the scoreboard function below to do the following:
 ]  
   */
 
-function scoreboard(/* CODE HERE */) {
-  /* CODE HERE */
+function scoreboard(scoreCB, inningCB, num) {
+  let result = [];
+  let homeScore = 0;
+  let awayScore = 0;
+  for(let i = 0; i < num; i++){
+  const currentScore = inningCB(scoreCB);
+    homeScore = homeScore + currentScore.Home
+    awayScore = awayScore + currentScore.Away
+    result.push(`Inning ${i + 1}: Away: ${currentScore.Away} - Home: ${currentScore.Home}`);
+  }
+  return result;
 }
 
 
-
+scoreboard(getInningScore, inning, 9);
 
 /* 🛑🛑🛑🛑🛑 Please do not modify anything below this line 🛑🛑🛑🛑🛑 */
 function foo(){
